@@ -1,0 +1,191 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="Helpers" %>
+<script type="text/javascript" src="../../Scripts/jquery-1.3.2.js"></script>
+<script type="text/javascript">
+    window.onload = clik
+
+    function clik() {
+        
+    }
+
+    $(document).ready(
+        function() {
+            $('.submenu .link_type').click(function() {
+                $(this).next().toggle('fast');
+                return false;
+            }).next().hide();
+        }
+    );
+
+</script>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title><%= Html.Encode(ViewData["Title"]) %></title>
+    <script type="text/javascript" src="../../Scripts/jquery-1.3.2.js"></script>
+    <link href="../../Content/Shopping/Style.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" media="interactive, braille, emboss, handheld, projection, screen, tty, tv" />
+    <link href="../../Content/print-styles.css" rel="stylesheet" type="text/css" media="print" />
+<style type="text/css">
+        .link_type
+        {
+            padding: 5px 10px 5px 10px;
+            background-position: 0px center;
+            margin: 0 0 0 5;
+            background-image: url('../../Resources/Images/demo-spindown-closed.gif');
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+<div id="page" >
+
+<div class="nav-login"
+        style="margin-left: -458; left: 50%; position: absolute; top: 0px;">
+    <ul>
+        <% if (Session["Current"] != null)
+           {
+               prototype3.Models.User _user = (prototype3.Models.User)Session["Current"];
+        %>
+               <li class="first">Welcome <%= _user.FirstName + " " + _user.LastName%> </li>
+               <li ><%= Html.ActionLink("Logout", "Logout", "User")%></li>
+        <% }
+           else
+           {
+        %>
+        <li class="first"><%= Html.ActionLink("Login", "Login", "User")%></li>
+        <li ><%= Html.ActionLink("Register", "Register", "User")%></li>
+        <% } %>
+    </ul>
+</div>
+<div class="header-container"
+        style="margin-left: -442; position: absolute; left: 50%; top:40px;">
+    <div class="logo"><a href="<%= Url.Action("Login", "User") %>">iGifts</a></div>
+    <div class="nav-main">
+        <ul>                            
+          <% if (Html.IsCurrentAction("Login", "User")) { %>
+            <li class="first active"><span class="active"></span><%= Html.ActionLink("Home", "Login", "User") %></li>
+          <% } else { %>
+            <li class="first"><%= Html.ActionLink("Home", "Login", "User") %></li>
+          <% }%>
+
+         <%-- <% if (Html.IsCurrentAction("Index", "User")) { %>
+            <li class="active"><span class="active"></span><%= Html.ActionLink("List of All users", "Index", "User") %></li>
+          <% } else { %>
+            <li><%= Html.ActionLink("List of All users", "Index", "User")%></li>
+          <% }%>--%>
+            <li class="active"><a id="blanklink" href="/User/Index"><%= Html.TextBox("javatext") %>
+                    <input type="submit" id="sub" value="Search" />  </a>
+            </li>    
+        </ul>
+
+    </div>
+    <div class="clear"></div>
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+    <div id="pageContent">
+            <div class="b">
+            <table width="980px">
+                <tr>
+                    <td valign="top">            
+                <div class="left">
+                    <div class="submenu">
+                        <ul class="f12">
+                            <li><a class="link_type" href="">Consumer Electronics</a></li>
+                                <ul class="f12" id="ul_consumer">
+                                    <li><%= Html.ActionLink("Mobile phones","DisplayItems", new {CatID=1, SubCatID=1})%></li>
+                                    <li><%= Html.ActionLink("Ipods and Iphones", "DisplayItems", new { CatID = 1, SubCatID = 2 })%></li>
+                                    <li><%= Html.ActionLink("Playstations", "DisplayItems", new { CatID = 1, SubCatID = 3 })%></li>
+                                    <li><%= Html.ActionLink("MP3 players and Accessories", "DisplayItems", new { CatID = 1, SubCatID = 4 })%></li>
+                                </ul>
+                            <li><a class="link_type" href="">Books and magazines</a></li>
+                                <ul class="f12" id="ul1">
+                                    <li><%= Html.ActionLink("Comics", "DisplayItems", new { CatID = 2, SubCatID = 1 })%></li>
+                                    <li><%= Html.ActionLink("Fiction and Non Fictions", "DisplayItems", new { CatID = 2, SubCatID = 2 })%></li>
+                                    <li><%= Html.ActionLink("Magazines", "DisplayItems", new { CatID = 2, SubCatID = 3 })%></li>
+                                    <li><%= Html.ActionLink("Business", "DisplayItems", new { CatID = 2, SubCatID = 4 })%></li>
+                                </ul>
+                            <li><a class="link_type" href="">Computers and Games</a></li>
+                                <ul class="f12" id="ul2">
+                                    <li><%= Html.ActionLink("CD and DVD writers", "DisplayItems", new { CatID = 3, SubCatID = 1 })%></li>
+                                    <li><%= Html.ActionLink("Laptop Accessories", "DisplayItems", new { CatID = 3, SubCatID = 2 })%></li>
+                                    <li><%= Html.ActionLink("Hard Disks and USB drives", "DisplayItems", new { CatID = 3, SubCatID = 3 })%></li>
+                                </ul>
+                            <li><a class="link_type" href="">Jewellery</a></li>
+                                <ul class="f12" id="ul3">
+                                    <li><%= Html.ActionLink("Bracelets", "DisplayItems", new { CatID = 4, SubCatID = 1 })%></li>
+                                    <li><%= Html.ActionLink("Chains", "DisplayItems", new { CatID = 4, SubCatID = 2 })%></li>
+                                    <li><%= Html.ActionLink("Earings", "DisplayItems", new { CatID = 4, SubCatID = 3 })%></li>
+                                    <li><%= Html.ActionLink("Pendants", "DisplayItems", new { CatID = 4, SubCatID = 4 })%></li>
+                                    <li><%= Html.ActionLink("Rings", "DisplayItems", new { CatID = 4, SubCatID = 5 })%></li>
+                                </ul>
+                            <li><a class="link_type" href="">Movies and music</a></li>
+                                <ul class="f12" id="ul4">
+                                    <li><%= Html.ActionLink("Bollywood Hits", "DisplayItems", new { CatID = 5, SubCatID = 1 })%></li>
+                                    <li><%= Html.ActionLink("Hollywood Classics", "DisplayItems", new { CatID = 5, SubCatID = 2 })%></li>
+                                    <li><%= Html.ActionLink("Hindi Top 10", "DisplayItems", new { CatID = 5, SubCatID = 3 })%></li>
+                                    <li><%= Html.ActionLink("English Chart Busters", "DisplayItems", new { CatID = 5, SubCatID = 4 })%></li>
+                                </ul>
+                            <li><a class="link_type" href="">Musical instruments</a></li>
+                                <ul class="f12" id="ul5">
+                                    <li><%= Html.ActionLink("Guitars", "DisplayItems", new { CatID = 6, SubCatID = 1 })%></li>
+                                    <li><%= Html.ActionLink("Drums and Percussions", "DisplayItems", new { CatID = 6, SubCatID = 2 })%></li>
+                                    <li><%= Html.ActionLink("Music Keyboards and Synths", "DisplayItems", new { CatID = 6, SubCatID = 3 })%></li>
+                                </ul>
+                            <li><a class="link_type" href="">Watches and sunglasses</a></li>
+                                <ul class="f12" id="ul6">
+                                    <li><%= Html.ActionLink("Wrist Watches", "DisplayItems", new { CatID = 7, SubCatID = 1 })%></li>
+                                    <li><%= Html.ActionLink("Wall clocks", "DisplayItems", new { CatID = 7, SubCatID = 2 })%></li>
+                                    <li><%= Html.ActionLink("Sunglasses", "DisplayItems", new { CatID = 7, SubCatID = 3 })%></li>
+                                </ul>
+                        </ul>
+                    </div>
+                </div>
+                    </td>
+                    <td valign="top">                
+                <div class="right">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+                    </td>
+                </tr>
+            </table>
+            </div>
+    <div class="pageContentFooter"></div>
+<%--        <div id="pageFooter">
+            © 2009 iGifts Cpoyright. All Rights Reserved.
+        </div>--%>
+
+    </div>
+    
+</div>
+<%--<div class="nav-footer-container">
+    <div class="nav-footer" >
+        <p class="copyright">&copy; iGifts Copyright 2009 </p>
+        <ul>
+            <li class="first"><%= Html.ActionLink("Home", "Login", "User") %></li>
+            <li><%= Html.ActionLink("About", "About", "User") %></li>
+            <li><%= Html.ActionLink("Feedback", "AddFeedback", "User") %></li>
+        </ul>
+    </div>
+</div>--%>
+
+</body>
+</html>

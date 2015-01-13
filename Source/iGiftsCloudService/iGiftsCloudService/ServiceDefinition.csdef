@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="iGiftsCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WebRole name="prototype3" enableNativeCodeExecution="false">
+    <InputEndpoints>
+      <!-- Must use port 80 for http and port 443 for https when running in the cloud -->
+      <InputEndpoint name="HttpIn" protocol="http" port="80" />
+    </InputEndpoints>
+    <ConfigurationSettings >
+
+      <Setting name="AccountName" />
+      <Setting name="AccountSharedKey" />
+      <Setting name="BlobStorageEndpoint" />
+      <Setting name="QueueStorageEndpoint" />
+      <Setting name="TableStorageEndpoint" />
+      <Setting name="ContainerName" />
+
+      <Setting name="InitialListsBlobUrl" />
+    </ConfigurationSettings>
+  </WebRole>
+</ServiceDefinition>

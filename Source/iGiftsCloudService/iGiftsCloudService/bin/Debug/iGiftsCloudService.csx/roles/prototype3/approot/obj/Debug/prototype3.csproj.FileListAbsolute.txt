@@ -1,0 +1,68 @@
+D:\Microsoft Azure Program\Project\prototypes\prototype3\prototype3\prototype3\bin\prototype3.dll
+D:\Microsoft Azure Program\Project\prototypes\prototype3\prototype3\prototype3\bin\prototype3.pdb
+D:\Microsoft Azure Program\Project\prototypes\prototype3\prototype3\prototype3\obj\Debug\ResolveAssemblyReference.cache
+D:\Microsoft Azure Program\Project\prototypes\prototype3\prototype3\prototype3\obj\Debug\prototype3.dll
+D:\Microsoft Azure Program\Project\prototypes\prototype3\prototype3\prototype3\obj\Debug\prototype3.pdb
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.pdb
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\ResolveAssemblyReference.cache
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.pdb
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Abstractions.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Routing.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.xml
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.pdb
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.xml
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.pdb
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Abstractions.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Routing.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.xml
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.pdb
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.xml
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\ResolveAssemblyReference.cache
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.dll
+D:\Abhi Stuff\Microsoft Azure Program\Main Project\Beta1\iGiftsBeta1\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.pdb
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.dll
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.pdb
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Abstractions.dll
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.dll
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Routing.dll
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.xml
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.pdb
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.xml
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\ResolveAssemblyReference.cache
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.dll
+D:\Microsoft Azure Program\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.pdb
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\ResolveAssemblyReference.cache
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.dll
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.pdb
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.dll
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.pdb
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Abstractions.dll
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.dll
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Routing.dll
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.xml
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.pdb
+C:\Project\Backup 8th october\iGiftsBeta1 8-oct-09 449\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.xml
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.dll
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\prototype3.pdb
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Abstractions.dll
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.dll
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Routing.dll
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\System.Web.Mvc.xml
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.pdb
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\bin\StorageClient.xml
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\ResolveAssemblyReference.cache
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.dll
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3 6-oct-09 1753 beta 1\prototype3\prototype3\prototype3\obj\Debug\prototype3.pdb
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3\prototype3\bin\prototype3.dll
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3\prototype3\bin\prototype3.pdb
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3\prototype3\bin\System.Web.Mvc.xml
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3\prototype3\obj\Debug\ResolveAssemblyReference.cache
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3\prototype3\obj\Debug\prototype3.dll
+F:\Users\Milind\Documents\GitHub\iGifts\source\prototype3\prototype3\obj\Debug\prototype3.pdb

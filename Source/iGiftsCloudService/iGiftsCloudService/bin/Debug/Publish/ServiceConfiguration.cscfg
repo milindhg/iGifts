@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ServiceConfiguration serviceName="iGiftsCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration">
+  <Role name="prototype3">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AccountName" value="milindgbstore" />
+      <Setting name="AccountSharedKey" value="i556jn34S7nrMMblZliSBR8Z9HkxQid8zmx1Lo1PkKgX3mBaCcc4vfAh43x/X0A9N0EGMgPneCnEQJ/2ID7kYg==" />
+      <Setting name="BlobStorageEndpoint" value="https://milindgbstore.blob.core.windows.net" />
+      <Setting name="QueueStorageEndpoint" value="https://milindgbstore.queue.core.windows.net" />
+      <Setting name="TableStorageEndpoint" value="https://milindgbstore.table.core.windows.net" />
+      <!--<Setting name="ContainerName" value="davidaikengallery" />-->
+      <Setting name="InitialListsBlobUrl" value=""/>
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

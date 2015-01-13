@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="iGifts" Class="iGiftDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=abhishek-PC\SQLEXPRESS;Initial Catalog=iGifts;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="iGiftsConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Connections" Member="Connections">
+    <Type Name="Connection">
+      <Column Name="CID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ReqConfirm" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CreditsGifted" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Connection_Transaction" Member="Transactions" ThisKey="CID" OtherKey="CID" Type="Transaction" />
+      <Association Name="User_Connection" Member="user" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="User_Connection1" Member="User1" ThisKey="FID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Wishlists" Member="Wishlists">
+    <Type Name="Wishlist">
+      <Column Name="WID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="WishItem" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Preference" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="User_Wishlist" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Events" Member="Events">
+    <Type Name="Event">
+      <Column Name="EventID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EventDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_Event" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Feedbacks" Member="Feedbacks">
+    <Type Name="Feedback">
+      <Column Name="FeedbackID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FeedbackText" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="FeedbackEmail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FeedbackName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transactions" Member="Transactions">
+    <Type Name="Transaction">
+      <Column Name="TID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AmountTransfered" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Connection_Transaction" Member="Connection" ThisKey="CID" OtherKey="CID" Type="Connection" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Credits" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Zipcode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="User_Connection" Member="Connections" ThisKey="UserID" OtherKey="UserID" Type="Connection" />
+      <Association Name="User_Connection1" Member="Connections1" ThisKey="UserID" OtherKey="FID" Type="Connection" />
+      <Association Name="User_Wishlist" Member="Wishlists" ThisKey="UserID" OtherKey="UserID" Type="Wishlist" />
+      <Association Name="User_Event" Member="Events" ThisKey="UserID" OtherKey="UserID" Type="Event" />
+      <Association Name="User_ShoppingTransaction" Member="ShoppingTransactions" ThisKey="UserID" OtherKey="FromID" Type="ShoppingTransaction" />
+      <Association Name="User_ShoppingTransaction1" Member="ShoppingTransactions1" ThisKey="UserID" OtherKey="ToID" Type="ShoppingTransaction" />
+      <Association Name="User_ScrapBook" Member="ScrapBooks" ThisKey="UserID" OtherKey="FromID" Type="ScrapBook" />
+      <Association Name="User_ScrapBook1" Member="ScrapBooks1" ThisKey="UserID" OtherKey="ToID" Type="ScrapBook" />
+      <Association Name="User_OnlineUser" Member="OnlineUsers" ThisKey="UserID" OtherKey="UID" Type="OnlineUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShoppingItems" Member="ShoppingItems">
+    <Type Name="ShoppingItem">
+      <Column Name="ItemID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SubCategoryID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ItemName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ItemInfo" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="ShoppingItem_ShoppingTransaction" Member="ShoppingTransactions" ThisKey="ItemID" OtherKey="ItemID" Type="ShoppingTransaction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShoppingTransactions" Member="ShoppingTransactions">
+    <Type Name="ShoppingTransaction">
+      <Column Name="ShoppingID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ToID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ItemID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ItemCredits" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ShippingAddress" Type="System.String" DbType="NVarChar(512) NOT NULL" CanBeNull="false" />
+      <Association Name="ShoppingItem_ShoppingTransaction" Member="ShoppingItem" ThisKey="ItemID" OtherKey="ItemID" Type="ShoppingItem" IsForeignKey="true" />
+      <Association Name="User_ShoppingTransaction" Member="User" ThisKey="FromID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="User_ShoppingTransaction1" Member="User1" ThisKey="ToID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ScrapBook" Member="ScrapBooks">
+    <Type Name="ScrapBook">
+      <Column Name="ScapID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ToID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Scrap" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="User_ScrapBook" Member="User" ThisKey="FromID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="User_ScrapBook1" Member="User1" ThisKey="ToID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OnlineUsers" Member="OnlineUsers">
+    <Type Name="OnlineUser">
+      <Column Name="OnlineID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="User_OnlineUser" Member="User" ThisKey="UID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

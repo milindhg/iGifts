@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="iGifts" Class="ShoppingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ABHISHEK-PC\SQLEXPRESS;Initial Catalog=iGifts;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="iGiftsConnectionString1" Provider="System.Data.SqlClient" />
+</Database>

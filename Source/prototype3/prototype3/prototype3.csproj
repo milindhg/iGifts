@@ -1,0 +1,431 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <RoleType>Web</RoleType>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{463DBA7F-C22C-44CF-AB10-20DB0DDE64CD}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>prototype3</RootNamespace>
+    <AssemblyName>prototype3</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="StorageClient, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\samples\StorageClient\Lib\bin\Debug\StorageClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ShoppingController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\IsCurrentActionHelper.cs" />
+    <Compile Include="Models\iGiftDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iGiftDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Shopping.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shopping.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShoppingItemRepository.cs" />
+    <Compile Include="Models\UserRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\ad-120-240.gif" />
+    <Content Include="Content\images\ad.gif" />
+    <Content Include="Content\images\bg-button.png" />
+    <Content Include="Content\images\bg-footer-tile.png" />
+    <Content Include="Content\images\bg-footer.png" />
+    <Content Include="Content\images\bg-legend.png" />
+    <Content Include="Content\images\bg-login.png" />
+    <Content Include="Content\images\bg-main-inner.png" />
+    <Content Include="Content\images\bg-main.png" />
+    <Content Include="Content\images\bg-nav-main-active.png" />
+    <Content Include="Content\images\bg-photo-sides.png" />
+    <Content Include="Content\images\bg-photo.png" />
+    <Content Include="Content\images\bg-poster.jpg" />
+    <Content Include="Content\images\bg-side-bucket.png" />
+    <Content Include="Content\images\bullet.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\photo-small-01.jpg" />
+    <Content Include="Content\images\photo-small-02.jpg" />
+    <Content Include="Content\print-styles.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\images\Thumbs.db" />
+    <None Include="Models\iGiftDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>iGiftDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\User.Master" />
+    <Content Include="Views\User\Details.aspx" />
+    <Content Include="Views\User\Index.aspx" />
+    <Content Include="Views\User\Login.aspx" />
+    <Content Include="Views\User\Logout.aspx" />
+    <Content Include="Views\User\NotFound.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Shopping\images\pspbrwse.jbf" />
+    <None Include="Models\iGiftDB.dbml.layout">
+      <DependentUpon>iGiftDB.dbml</DependentUpon>
+    </None>
+    <None Include="Models\Shopping.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Shopping.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Data\iGiftDB.mdf">
+    </Content>
+    <Content Include="App_Data\iGiftDB_log.ldf">
+      <DependentUpon>iGiftDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\prototype3.dll" />
+    <Content Include="bin\prototype3.pdb" />
+    <Content Include="bin\StorageClient.dll" />
+    <Content Include="bin\System.Web.Abstractions.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Routing.dll" />
+    <Content Include="Content\images\bg-legend-pendingreq.png" />
+    <Content Include="Content\images\bg-legend-Tabs-Clicked.png" />
+    <Content Include="Content\images\bg-legend-Tabs-Default.png" />
+    <Content Include="Content\images\Christmas-gifts-1383.jpg" />
+    <Content Include="Content\ModalPopup\SyntaxHighlighter.css" />
+    <Content Include="Content\Shopping\images\AddToCart.png" />
+    <Content Include="Content\Shopping\images\Banner.gif" />
+    <Content Include="Content\Shopping\images\banner_1.png" />
+    <Content Include="Content\Shopping\images\banner_2.png" />
+    <Content Include="Content\Shopping\images\banner_btn.png" />
+    <Content Include="Content\Shopping\images\bg.png" />
+    <Content Include="Content\Shopping\images\block.png" />
+    <Content Include="Content\Shopping\images\block_line.png" />
+    <Content Include="Content\Shopping\images\cell_bg.png" />
+    <Content Include="Content\Shopping\images\content_bg.png" />
+    <Content Include="Content\Shopping\images\content_right_bg.gif" />
+    <Content Include="Content\Shopping\images\content_right_footer.gif" />
+    <Content Include="Content\Shopping\images\content_right_header.gif" />
+    <Content Include="Content\Shopping\images\display_btn.png" />
+    <Content Include="Content\Shopping\images\items\%28300%29 Yellow &amp; White Gold Bulgari Rings.jpg" />
+    <Content Include="Content\Shopping\images\items\Ajanta_tolmol.jpg" />
+    <Content Include="Content\Shopping\images\items\Ajanta_tolmol_2.jpg" />
+    <Content Include="Content\Shopping\images\items\Archies.jpg" />
+    <Content Include="Content\Shopping\images\items\billboardtop10_june_09.jpg" />
+    <Content Include="Content\Shopping\images\items\Blackberry_8900.jpg" />
+    <Content Include="Content\Shopping\images\items\Blue-Ray DVD-RW PC.jpg" />
+    <Content Include="Content\Shopping\images\items\cheap-necklaces-300x300.jpg" />
+    <Content Include="Content\Shopping\images\items\claw-money-aviator-sunglasses-2.jpg" />
+    <Content Include="Content\Shopping\images\items\CNBC.jpg" />
+    <Content Include="Content\Shopping\images\items\Creative_Zen.jpg" />
+    <Content Include="Content\Shopping\images\items\Crystal.jpg" />
+    <Content Include="Content\Shopping\images\items\dead-silence-poster-en.jpg" />
+    <Content Include="Content\Shopping\images\items\dead-silence-poster-en_2.jpg" />
+    <Content Include="Content\Shopping\images\items\dead_silence_movie_poster_icon714.jpg" />
+    <Content Include="Content\Shopping\images\items\devd-2009-2a.jpg" />
+    <Content Include="Content\Shopping\images\items\djdoll-700037.jpg" />
+    <Content Include="Content\Shopping\images\items\drums_thumb.jpg" />
+    <Content Include="Content\Shopping\images\items\FastTrack_1.jpg" />
+    <Content Include="Content\Shopping\images\items\finger-drums-table-top-drum-set.jpg" />
+    <Content Include="Content\Shopping\images\items\fortune-magazine.jpg" />
+    <Content Include="Content\Shopping\images\items\gibson-guitar-of-the-month-april-08.jpg" />
+    <Content Include="Content\Shopping\images\items\gibson_guitar.jpg" />
+    <Content Include="Content\Shopping\images\items\Gold_1.jpg" />
+    <Content Include="Content\Shopping\images\items\gucci-necklaces-7.jpg" />
+    <Content Include="Content\Shopping\images\items\GUITAR ACOUSTIC F CUT.jpg" />
+    <Content Include="Content\Shopping\images\items\GUITAR ACOUSTIC.jpg" />
+    <Content Include="Content\Shopping\images\items\HarryPotter_7 Book Pack Series_mothi.jpg" />
+    <Content Include="Content\Shopping\images\items\HarryPotter_7 Book_Pack_Series.jpg" />
+    <Content Include="Content\Shopping\images\items\Hindi-Remix.jpg" />
+    <Content Include="Content\Shopping\images\items\iphone_16GB.jpg" />
+    <Content Include="Content\Shopping\images\items\iphone_16GB_2.jpg" />
+    <Content Include="Content\Shopping\images\items\ipod Shuffle_1GB.gif" />
+    <Content Include="Content\Shopping\images\items\ipodinear_headphones.jpg" />
+    <Content Include="Content\Shopping\images\items\ipod_classic120GB.jpg" />
+    <Content Include="Content\Shopping\images\items\ipod_nano_8GB.jpg" />
+    <Content Include="Content\Shopping\images\items\Kingston_8GB.jpg" />
+    <Content Include="Content\Shopping\images\items\Kishore Kumar - The Finest Moments.jpg" />
+    <Content Include="Content\Shopping\images\items\Kishore-Kumar-Hits.jpg" />
+    <Content Include="Content\Shopping\images\items\Laptop-Batteries.jpg" />
+    <Content Include="Content\Shopping\images\items\LG_dvd_rw_black.jpg" />
+    <Content Include="Content\Shopping\images\items\magazine-Forbes.jpg" />
+    <Content Include="Content\Shopping\images\items\nintendo__21.gif" />
+    <Content Include="Content\Shopping\images\items\nintendo__21.jpg" />
+    <Content Include="Content\Shopping\images\items\nokia_n97_32GB.jpg" />
+    <Content Include="Content\Shopping\images\items\Overdrive.jpg" />
+    <Content Include="Content\Shopping\images\items\pcquest.jpg" />
+    <Content Include="Content\Shopping\images\items\pearl_necklace.jpg" />
+    <Content Include="Content\Shopping\images\items\pendant_1.jpg" />
+    <Content Include="Content\Shopping\images\items\Provogue_1.jpg" />
+    <Content Include="Content\Shopping\images\items\Red_Lounge.jpg" />
+    <Content Include="Content\Shopping\images\items\right_hand_ring.jpg" />
+    <Content Include="Content\Shopping\images\items\Roland G-70.jpg" />
+    <Content Include="Content\Shopping\images\items\RolandTD3SWElectronicDrumSet.jpg" />
+    <Content Include="Content\Shopping\images\items\rolex-cosmograph-daytona_1.jpg" />
+    <Content Include="Content\Shopping\images\items\Rolex-Daytona-Everose-Chronograph.jpg" />
+    <Content Include="Content\Shopping\images\items\Samsung 52x.jpg" />
+    <Content Include="Content\Shopping\images\items\Samsung 52x_2.jpg" />
+    <Content Include="Content\Shopping\images\items\Samsung_omnia.jpg" />
+    <Content Include="Content\Shopping\images\items\Seven_Lounge.jpg" />
+    <Content Include="Content\Shopping\images\items\ShawshankRedemptionPoster.jpg" />
+    <Content Include="Content\Shopping\images\items\sholay_2.jpg" />
+    <Content Include="Content\Shopping\images\items\sholay_poster.jpg" />
+    <Content Include="Content\Shopping\images\items\silver-pendants.jpg" />
+    <Content Include="Content\Shopping\images\items\snamm05_roland_exr3s.jpg" />
+    <Content Include="Content\Shopping\images\items\SONY_ERICSSON_W350i.png" />
+    <Content Include="Content\Shopping\images\items\Sony_Ps3_1.jpg" />
+    <Content Include="Content\Shopping\images\items\Sony_ps3_2.jpg" />
+    <Content Include="Content\Shopping\images\items\Sony_ps3_3.jpg" />
+    <Content Include="Content\Shopping\images\items\Sony_Walkman Series_CD_player.gif" />
+    <Content Include="Content\Shopping\images\items\sony_walkman_wireless.jpg" />
+    <Content Include="Content\Shopping\images\items\StarpexGuitar-ESQ-CouchPotato_fb-83628328.jpg" />
+    <Content Include="Content\Shopping\images\items\swatch-watches-300x300.jpg" />
+    <Content Include="Content\Shopping\images\items\tahitian-pearl-ring.jpg" />
+    <Content Include="Content\Shopping\images\items\The_Lord_of_the_Rings_-_The_Ultimate_Critical_Review.jpg" />
+    <Content Include="Content\Shopping\images\items\The_Lord_of_the_Rings_Full Book Set.jpg" />
+    <Content Include="Content\Shopping\images\items\thn_1991_Super_Nintendo2.jpg" />
+    <Content Include="Content\Shopping\images\items\three_stone_ring.jpg" />
+    <Content Include="Content\Shopping\images\items\tintin.gif" />
+    <Content Include="Content\Shopping\images\items\tintinreporter.jpg" />
+    <Content Include="Content\Shopping\images\items\western-digital-hard-drive.jpg" />
+    <Content Include="Content\Shopping\images\items\wireless-bluetooth-headphones.jpg" />
+    <Content Include="Content\Shopping\images\items\Xbox360.jpg" />
+    <Content Include="Content\Shopping\images\items\xbox360Halo3EditionConsole.jpg" />
+    <Content Include="Content\Shopping\images\items\xbox360HardDrive.jpg" />
+    <Content Include="Content\Shopping\images\items\xbox360HDMICable.jpg" />
+    <Content Include="Content\Shopping\images\items\Xbox360Headset.jpg" />
+    <Content Include="Content\Shopping\images\items\Xbox360MemoryUnit.jpg" />
+    <Content Include="Content\Shopping\images\items\xbox360MessengerKit.jpg" />
+    <Content Include="Content\Shopping\images\items\Xbox360WheelController.jpg" />
+    <Content Include="Content\Shopping\images\items\Xbox360WirelessController.jpg" />
+    <Content Include="Content\Shopping\images\items\yamaha-keyboard.jpg" />
+    <Content Include="Content\Shopping\images\items\yamaha-keyboard_2.jpg" />
+    <Content Include="Content\Shopping\images\item_bg.png" />
+    <Content Include="Content\Shopping\images\logo.gif" />
+    <Content Include="Content\Shopping\images\logo.png" />
+    <Content Include="Content\Shopping\images\menu_bg.png" />
+    <Content Include="Content\Shopping\images\search_btn.png" />
+    <Content Include="Content\Shopping\Style.css" />
+    <Content Include="obj\Debug\prototype3.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\prototype3.dll" />
+    <Content Include="obj\Debug\prototype3.pdb" />
+    <Content Include="obj\Debug\TempPE\Models.iGiftDB.designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Models.Shopping.designer.cs.dll" />
+    <Content Include="Resources\Images\%28300%29 Yellow &amp; White Gold Bulgari Rings.jpg" />
+    <Content Include="Resources\Images\Acoustic_guitar.jpg" />
+    <Content Include="Resources\Images\Acoustic_guitar_1.jpg" />
+    <Content Include="Resources\Images\Ajanta_tolmol.jpg" />
+    <Content Include="Resources\Images\apple-ipod-in-ear.jpg" />
+    <Content Include="Resources\Images\Archie cover.jpg" />
+    <Content Include="Resources\Images\bike.jpg" />
+    <Content Include="Resources\Images\billboardtop10_june_09.jpg" />
+    <Content Include="Resources\Images\Blackberry_8900.jpg" />
+    <Content Include="Resources\Images\Blue_Ray_Recorder.jpg" />
+    <Content Include="Resources\Images\Bvlgari Rings.jpg" />
+    <Content Include="Resources\Images\chip-magazine.jpg" />
+    <Content Include="Resources\Images\Creative Zen.jpg" />
+    <Content Include="Resources\Images\Crystal.jpg" />
+    <Content Include="Resources\Images\dead_silence.jpg" />
+    <Content Include="Resources\Images\demo-spindown-closed.gif" />
+    <Content Include="Resources\Images\demo-spindown-open.gif" />
+    <Content Include="Resources\Images\devd-2009.jpg" />
+    <Content Include="Resources\Images\Diamondpendant_1.jpg" />
+    <Content Include="Resources\Images\Dimaond_necklaces.jpg" />
+    <Content Include="Resources\Images\drums_thumb.jpg" />
+    <Content Include="Resources\Images\fortune-magazine_1.jpg" />
+    <Content Include="Resources\Images\gibson_guitar.jpg" />
+    <Content Include="Resources\Images\Gold_1.jpg" />
+    <Content Include="Resources\Images\harry_potter_paperback_set.jpg" />
+    <Content Include="Resources\Images\Hindi-Remix.jpg" />
+    <Content Include="Resources\Images\iGiftsCredits.jpg" />
+    <Content Include="Resources\Images\iphone_16GB_2.jpg" />
+    <Content Include="Resources\Images\ipod-shuffle.jpg" />
+    <Content Include="Resources\Images\ipodinear_headphones.jpg" />
+    <Content Include="Resources\Images\ipod_classic120GB.jpg" />
+    <Content Include="Resources\Images\ipod_nano_8GB.jpg" />
+    <Content Include="Resources\Images\Kingston _ 2GB.jpg" />
+    <Content Include="Resources\Images\Kishore-Kumar-Hits_1.jpg" />
+    <Content Include="Resources\Images\Laptop-Batteries.jpg" />
+    <Content Include="Resources\Images\LG-CD_DVD-Writers.jpg" />
+    <Content Include="Resources\Images\Lord_of the rings_2.JPG" />
+    <Content Include="Resources\Images\magazine-Forbes_2.jpg" />
+    <Content Include="Resources\Images\nokia_n97_32GB.jpg" />
+    <Content Include="Resources\Images\prada-unisex-sunglasses_1.jpg" />
+    <Content Include="Resources\Images\RayBan_1.jpg" />
+    <Content Include="Resources\Images\Roland-keyboard.jpg" />
+    <Content Include="Resources\Images\Rolex_1.jpg" />
+    <Content Include="Resources\Images\Rolling Stone.jpg" />
+    <Content Include="Resources\Images\Samsung 52x.jpg" />
+    <Content Include="Resources\Images\Samsung_omnia.jpg" />
+    <Content Include="Resources\Images\sholay_2.jpg" />
+    <Content Include="Resources\Images\Sony Walkman Series.jpg" />
+    <Content Include="Resources\Images\SONY_ERICSSON_W350i.jpg" />
+    <Content Include="Resources\Images\Sony_Ps3_1.jpg" />
+    <Content Include="Resources\Images\Sony_ps3_2.jpg" />
+    <Content Include="Resources\Images\Sony_ps3_3.jpg" />
+    <Content Include="Resources\Images\sony_walkman_wireless.jpg" />
+    <Content Include="Resources\Images\Swatch_1.jpg" />
+    <Content Include="Resources\Images\the-shawshank-redemption.jpg" />
+    <Content Include="Resources\Images\thn_1991_Super_Nintendo2.jpg" />
+    <Content Include="Resources\Images\tintin.jpg" />
+    <Content Include="Resources\Images\triple-hoop-earrings.jpg" />
+    <Content Include="Resources\Images\western-digital-hard-drive_3.jpg" />
+    <Content Include="Resources\Images\wireless-bluetooth-headphones_1.jpg" />
+    <Content Include="Resources\Images\Xbox360.jpg" />
+    <Content Include="Resources\Images\yamaha-keyboard.jpg" />
+    <Content Include="Scripts\ModalPopup\ModalPopups.js" />
+    <Content Include="Scripts\ModalPopup\shBrushJScript.js" />
+    <Content Include="Scripts\ModalPopup\shCore.js" />
+    <Content Include="Scripts\ModalPopup\shInit.js" />
+    <Content Include="Scripts\SimpleAccordians\accordian-src.js" />
+    <Content Include="Scripts\SimpleAccordians\accordian.pack.js" />
+    <Content Include="upload.aspx" />
+    <Content Include="Views\Shared\Shopping.Master" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Shopping\BuyItem.aspx" />
+    <Content Include="Views\Shopping\CreditTransactionGrid.aspx" />
+    <Content Include="Views\Shopping\GiftTransactionGrid.aspx" />
+    <Content Include="Views\Shopping\Index.aspx" />
+    <Content Include="Views\Shopping\ShoppingTransaction.aspx" />
+    <Content Include="Views\User\About.aspx" />
+    <Content Include="Views\User\AddFeedback.aspx" />
+    <Content Include="Views\User\Edit.aspx" />
+    <Content Include="Views\User\FriendsPage.aspx" />
+    <Content Include="Views\User\Register.aspx" />
+    <Content Include="Views\User\ScrapBook.aspx" />
+    <Content Include="Views\User\Search.aspx" />
+    <Content Include="Views\User\timepass.aspx" />
+    <Content Include="Views\User\TransferCredits.aspx" />
+    <Content Include="Views\User\UploadPhoto.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Shopping.dbml.layout">
+      <DependentUpon>Shopping.dbml</DependentUpon>
+    </None>
+    <None Include="obj\Debug\build.force" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\Refactor\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49295</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
